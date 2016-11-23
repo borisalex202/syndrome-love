@@ -1,0 +1,56 @@
+.link {
+  &s {
+    margin: 0 5px;
+    @include flexbox();
+    @include flex-wrap(wrap);
+  }
+  &-block {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 10px;
+    @include flexbox();
+
+    .content {
+      width: 100%;
+      position: relative;
+      padding: 50px 30px;
+      border-radius: 5px;
+      background: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      min-height: 150px;
+      background: #fbfcfc;
+      border: 1px solid #e1e1e1;
+      @include flexbox();
+      @include align-items(center);
+
+      &:before {
+        content: '';
+        border-radius: 4px 4px 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: #e1e1e1;
+      }
+      &:hover {
+        a {
+          color: $link-hover-color;
+        }
+      }
+      a {
+        color: #000;
+        font-family: $font-family-bold;
+        font-size: 20px;
+        line-height: 32px;
+        text-decoration: none;
+
+        @media screen and (max-width: $screen-sm-max) {
+          font-size: 24px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}

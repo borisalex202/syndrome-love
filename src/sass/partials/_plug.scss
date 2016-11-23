@@ -1,0 +1,156 @@
+.plug {
+  background: url('../img/plug.png') no-repeat #6e2164;
+  min-height: 100%;
+
+  &-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 5% 25px 3%;
+    min-height: 100%;
+  }
+  &-description {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 130px 0 0;
+    min-height: 100%;
+    text-align: center;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: darken(#fff, 15%);
+    }
+  }
+  .icon-logo-white {
+    max-width: 220px;
+    max-height: 75px;
+  }
+  .title {
+    font-size: 31px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .slogan {
+    font-family: $font-family-bold;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .description {
+    font-family: $font-family-regular;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 80px;
+
+    &-mobile {
+      display: none;
+    }
+    p {
+      font-family: $font-family-regular;
+      color: #fff;
+      font-size: 17px;
+    }
+    .bold {
+      font-family: $font-family-bold;
+    }
+  }
+  @media screen and (max-height: 800px) {
+    &-container {
+      padding: 3% 25px 3%;
+    }
+    &-description {
+      padding: 80px 0 0;
+    }
+  }
+  @media screen and (max-height: 600px) and (max-width: $screen-sm-max) {
+    &-description {
+      padding: 50px 0 0;
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    background-position: -10% 0;
+  }
+  @media screen and (max-width: 1400px) {
+    background-position: -20% 0;
+  }
+  @media screen and (max-width: $screen-lg) {
+    background-position: -40% 0;
+
+    &-container {
+      text-align: center;
+    }
+    .title {
+      br {
+        display: none;
+      }
+    }
+    .logo {
+      text-align: right;
+    }
+    .description {
+      font-size: 24px;
+      line-height: 30px;
+
+      a {
+        display: block;
+      }
+      br {
+        display: none;
+      }
+      p {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      .phone {
+        margin-top: 60px;
+      }
+    }
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    background-position: -160px -0px;
+    background-size: 700px 3032px;
+
+    &-container {
+      padding: 3% 15px 3%;
+    }
+
+  }
+  @media screen and (max-width: ($screen-xs-max - 1)) {
+    background-position: -120px -1250px;
+    background-size: 500px 2332px;
+
+    &-description {
+      padding: 40px 0 0;
+    }
+    .icon-logo-white {
+      max-width: 165px;
+      max-height: 60px;
+    }
+    .description {
+      margin-top: 40px;
+
+      &-desktop {
+        display: none;
+      }
+      &-mobile {
+        display: block;
+      }
+      .title {
+        font-size: 30px;
+        line-height: 38px;
+        text-align: center;
+      }
+    }
+    .title {
+      font-size: 17px;
+      line-height: 22px;
+    }
+    .slogan {
+      font-size: 26px;
+    }
+  }
+}

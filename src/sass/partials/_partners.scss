@@ -1,0 +1,30 @@
+.partner {
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .thumb {
+    min-height: 190px;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 20px;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+
+    img {
+      max-height: 170px;
+      width: auto;
+    }
+  }
+  .title {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}

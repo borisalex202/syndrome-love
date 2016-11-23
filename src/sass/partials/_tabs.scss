@@ -1,0 +1,47 @@
+.tab {
+  &-nav {
+    @include flexbox();
+    @include flex-wrap(nowrap);
+
+    li {
+      flex: 1;
+      text-align: center;
+      border: 1px solid #e8eaec;
+      @include transition(all .5s ease);
+
+      &.active {
+        border: 1px solid #fbad18;
+        background: #fbad18;
+
+        a {
+          color: #fff;
+        }
+      }
+      a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+    }
+    @media screen and (max-width: $screen-xs) {
+      @include flex-wrap(wrap);
+
+      li {
+        flex: auto;
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-content {
+
+  }
+  &-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

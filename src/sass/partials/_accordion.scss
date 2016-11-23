@@ -1,0 +1,26 @@
+.accordion {
+  &-link {
+    color: #000;
+    display: block;
+    margin-bottom: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &-content {
+    display: none;
+    width: 100%;
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  &.active {
+    .accordion-link {
+      color: $main-color;
+    }
+    .icon-arrow-down {
+      color: $main-color;
+      @include rotate(180deg);
+    }
+  }
+}

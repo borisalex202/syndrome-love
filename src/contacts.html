@@ -1,0 +1,116 @@
+@@include('templates/_head.html')
+
+@@include('templates/_header.html')
+
+            <div class="widget map ind-40 relative">
+              <div class="container">
+                <div class="map-info">
+                  <div class="breadcrumbs">
+                    <ul class="no-style">
+                      <li><a href="index.html">Главная</a></li>
+                      <li><a href="#">О нас</a></li>
+                      <li>Контакты</li>
+                    </ul>
+                  </div>
+                  <h2>Контакты</h2>
+                  <ul class="no-style map-contact">
+                    <li>
+                      <small>Телефон</small>
+                      <a href="tel:+7 (499) 367-1000" class="phone">+7 (499) 367-1000</a>
+                    </li>
+                    <li class="hidden-xs hidden-md hidden-lg">
+                      <small>Адрес</small>
+                      <p>05043, Москва, 3-я Парковая 14А</p>
+                    </li>
+                    <li>
+                      <small>Факс</small>
+                      <a href="tel:+7 (499) 367-2636" class="phone">+7 (499) 367-2636</a>
+                    </li>
+                    <li class="hidden-sm">
+                      <small>Адрес</small>
+                      <p>05043, Москва, 3-я Парковая 14А</p>
+                    </li>
+                    <li>
+                      <small>E-mail</small>
+                      <a href="mailto:downsideup@downsideup.org" class="mail">downsideup@downsideup.org</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="map"></div>
+            </div>
+
+            <div class="widget ind-80">
+              <div class="container">
+                <div class="title-sm">Остались вопросы?</div>
+                <p class="fs-18 indent-50">Свяжитесь с нами и мы ответим на все интересующие вопросы</p>
+                <form class="">
+                  <div class="row">
+                    <div class="col-md-4 col-xs-12 input-block">
+                      <input type="text">
+                      <span class="input-block-placeholder">Как вас зовут?</span>
+                    </div>
+                    <div class="col-md-4 col-xs-12 input-block">
+                      <input type="tel">
+                      <span class="input-block-placeholder">Телефон для связи</span>
+                    </div>
+                    <div class="col-md-4 col-xs-12 input-block">
+                      <input type="email">
+                      <span class="input-block-placeholder">E-mail</span>
+                    </div>
+                    <div class="col-xs-12 input-block">
+                      <textarea name="name" rows="8" cols="40"></textarea>
+                      <span class="input-block-placeholder">Что вы хотите узнать?</span>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-50 btn-default">Отправить</button>
+                </form>
+              </div>
+            </div>
+
+@@include('templates/_footer.html')
+
+<script type="text/javascript">
+      function initMap() {
+        var latLng = {lat: 55.791998, lng: 37.7823943},
+            marker_latLng = {lat: 55.791998, lng: 37.7843943},
+            marker_mobile_latLng = {lat: 55.791998, lng: 37.7823943};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: latLng,
+          scrollwheel: false,
+          mapTypeControl: false
+        });
+
+        var image = {
+          url: 'img/icon-marker.png',
+          size: new google.maps.Size(41, 62),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(0, 0)
+        };
+
+        if ($(window).width() <= '991'){
+          var marker = new google.maps.Marker({
+            icon: image,
+            position: marker_mobile_latLng,
+            map: map,
+            title: 'Синдром Любви'
+          });
+        } else {
+          var marker = new google.maps.Marker({
+            icon: image,
+            position: marker_latLng,
+            map: map,
+            title: 'Синдром Любви'
+          });
+        }
+      }
+
+      $(window).on("load resize",function(){
+          initMap();
+      });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEF4Yrd2O6EnhpJnBNWg5ifaQKrhG6IG0&signed_in=true&callback=initMap" async defer></script>
+
+@@include('templates/_end.html')

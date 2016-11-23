@@ -1,0 +1,33 @@
+/* Fonts */
+$font-family-regular:           'BitterRegular', sans-serif;
+$font-family-bold:              'BitterBold', sans-serif;
+
+/* Main */
+$main-color:                     #ee3b37;
+$secodn-color:                   #e59805;
+
+$text-color:                     #000;
+$head-color:                     #444;
+$link-color:                     #939ca1;
+$link-hover-color:               #5a6063;
+$link-hover-color-item:          #ee3b37;
+$link-hover-decoration:          underline;
+
+/* Buttons */
+$btn-font-weight:                normal;
+
+$btn-default-color:              #fff;
+$btn-default-bg:                 #faad19;
+$btn-default-bg-hover:           darken($btn-default-bg, 8%);
+$btn-default-bg-active:          darken($btn-default-bg, 15%);
+$btn-default-border:             #faad19;
+
+$btn-danger-color:              #fff;
+$btn-danger-bg:                 #ee3b37;
+$btn-danger-bg-hover:           #d60f0f;
+$btn-danger-bg-active:          #c20e0e;
+$btn-danger-border:             #ee3b37;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 transparent;
+$btn-primary-border:             #fff;

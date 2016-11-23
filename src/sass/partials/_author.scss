@@ -1,0 +1,9 @@
+.author {
+  margin: 35px 0;
+
+  .thumb {
+    @media screen and (max-width: $screen-xs-max) {
+      margin-bottom: 15px;
+    }
+  }
+}

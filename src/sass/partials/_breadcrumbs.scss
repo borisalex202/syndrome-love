@@ -1,0 +1,52 @@
+.breadcrumbs {
+  &-back {
+    margin-bottom: 30px;
+
+    a {
+      font-size: 20px;
+      color: $main-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $secodn-color;
+      }
+    }
+    .icon-back {
+      position: relative;
+      top: 2px;
+    }
+    @media screen and (min-width: $screen-md) {
+      display: none;
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+      color: #878787;
+      font-size: 13px;
+
+      &:after {
+        font-size: 13px;
+        content: '/';
+        display: inline-block;
+        color: #878787;
+        margin: 0 0 0 3px;
+      }
+      &:last-child:after {
+        display: none;
+      }
+      a {
+        font-size: 13px;
+        color: $main-color;
+        text-decoration: none;
+
+        &:hover {
+          color: lighten($main-color, 10%);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    display: none;
+  }
+}

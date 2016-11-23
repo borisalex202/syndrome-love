@@ -1,0 +1,28 @@
+.share {
+  li {
+    margin: 0 10px 10px 0;
+    position: relative;
+    display: inline-block;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .number {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    right: 0;
+    left:0;
+    padding-left: 32px;
+    padding-top: 6px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+
+    @media screen and (max-width: $screen-xs) {
+      padding-left: 26px;
+      font-size: 12px;
+    }
+  }
+}

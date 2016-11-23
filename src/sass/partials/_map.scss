@@ -1,0 +1,87 @@
+.map {
+  &-info {
+    position: relative;
+    z-index: 8;
+    padding: 45px 30px 30px;
+    max-width: 480px;
+    background: rgba(255,255,255,.9);
+
+    h2 {
+      margin: 0px 0 50px;
+      line-height: 20px;
+    }
+    @media screen and (max-width: $screen-sm-max) {
+      max-width: 100%;
+      padding: 45px 0 30px;
+    }
+  }
+  &-contact {
+    small {
+      font-size: 13px;
+      display: block;
+      color: #878787;
+    }
+    li {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+    .phone {
+      color: #000;
+      text-decoration: none;
+      font-size: 25px;
+
+      &:hover {
+        color: #5a6063;
+      }
+    }
+    .mail {
+      font-size: 16px;
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        color: #5a6063;
+      }
+    }
+    @media screen and (max-width: $screen-sm-max) and (min-width: $screen-xs) {
+      @include flexbox;
+      @include flex-wrap(wrap);
+
+      li {
+        width: 50%;
+      }
+    }
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    padding: 0 !important;
+
+    .breadcrumbs {
+      display: none;
+    }
+    #map {
+      position: static;
+      height: 580px;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    #map {
+      height: 450px;
+    }
+  }
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}

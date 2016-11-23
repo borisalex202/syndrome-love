@@ -1,0 +1,39 @@
+.new {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .date,
+  .tag {
+    display: inline-block;;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    color: #878787;
+  }
+  h5,
+  .title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $font-family-bold;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    h5,
+    .title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 36px;
+    }
+    a {
+      font-size: 20px;
+    }
+    &-thumb {
+      margin-bottom: 35px;
+    }
+  }
+}

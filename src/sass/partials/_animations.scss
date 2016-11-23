@@ -1,0 +1,32 @@
+@-webkit-keyframes blink {
+    0% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
+    }
+}
+@-ms-keyframes blink {
+    0% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
+    }
+}
+@keyframes blink {
+    0% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
+    }
+}

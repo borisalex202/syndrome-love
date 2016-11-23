@@ -1,0 +1,237 @@
+@@include('templates/_head.html')
+
+<div class="widget ind-50">
+  <div class="container">
+      <h1 class="open-sans">UI Style Guide</h1>
+  </div>
+</div>
+<div class="widget bg-gray ind-70">
+  <div class="container">
+      <p class="open-sans fs-28"><span class="fs-16 text-gray-light">01</span> Типографика</p>
+      <hr>
+      <div class="row">
+        <div class="flex flex-wrap">
+          <div class="col-md-6 col-xs-12 indent-70">
+            <p class="open-sans fs-18">Заголовки</p>
+            <h1>H1 - bold, 47px</h1>
+            <h2>H2 - bold, 36px</h2>
+            <h3>H3 - bold, 22px</h3>
+            <h4>H4 - bold, 20px</h4>
+            <h5>H5 - bold, 16px</h5>
+          </div>
+          <div class="col-md-6 col-xs-12 indent-70">
+            <p class="open-sans fs-18">Основной текст</p>
+            <p>Благотворительный фонд «Даунсайд Ап» принимает участие в спортивном мероприятии «Забег Корпораций», которое состоится 17 сентября. </p>
+            <p>Regular, 15 px</p>
+            <p class="indent-20"><a href="#">Ccылка</a>    <a href="#" class="hover">Ссылка при наведении</a></p>
+            <p>
+                <a href="#" target="_blank">Перейти на сайт проекта<svg class="icon icon-new-tab"><use xlink:href="#icon-new-tab"></use></svg></a><br>
+                <a href="#" target="_blank" class="hover">Перейти на сайт проекта<svg class="icon icon-new-tab"><use xlink:href="#icon-new-tab"></use></svg></a>
+            </p>
+          </div>
+          <div class="col-md-6 col-xs-12 indent-70">
+            <p class="open-sans fs-28"><span class="fs-16 text-gray-light">02</span> Кнопки и активные элементы</p>
+            <hr>
+            <div class="row">
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-default full indent-10">Normal</button>
+                <button type="button" class="btn btn-default full indent-10 hover">Hover</button>
+                <button type="button" class="btn btn-default full active">Active</button>
+              </div>
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-danger full indent-10">Normal</button>
+                <button type="button" class="btn btn-danger full indent-10 hover">Hover</button>
+                <button type="button" class="btn btn-danger full active">Active</button>
+              </div>
+              <div class="col-xs-3">
+                <button type="button" class="btn btn-primary full indent-10">Normal</button>
+                <button type="button" class="btn btn-primary full indent-10 hover">Hover</button>
+                <button type="button" class="btn btn-primary full active">Active</button>
+              </div>
+              <div class="col-xs-12 indent-40">
+
+              </div>
+              <div class="col-xs-12 indent-30">
+                <svg class="icon icon-arrow-prev slick-prev" style="display: inline-block;"><use xlink:href="#icon-arrow-prev"></use></svg>
+                <svg class="icon icon-arrow-prev slick-next" style="display: inline-block;"><use xlink:href="#icon-arrow-next"></use></svg>
+
+                <ul class="social no-style">
+                  <li style="display: inline-block;">
+                    <a href="#">
+                      <svg class="icon icon-social icon-social-vk"><use xlink:href="#icon-vk"></use></svg>
+                    </a>
+                  </li>
+                  <li style="display: inline-block;">
+                    <a href="#">
+                      <svg class="icon icon-social icon-social-fb"><use xlink:href="#icon-fb"></use></svg>
+                    </a>
+                  </li>
+                  <li style="display: inline-block;">
+                    <a href="#">
+                      <svg class="icon icon-social icon-social-ok"><use xlink:href="#icon-ok"></use></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-12">
+                @@include('templates/_share.html')
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 col-xs-12 indent-70">
+            <p class="open-sans fs-18">Списки</p>
+            <div class="row indent-60">
+              <div class="col-sm-6 col-xs-12">
+                <ul>
+                  <li>Первый пункт</li>
+                  <li>Второй пункт</li>
+                  <li>Третий пункт</li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-xs-12">
+                <ol>
+                  <li>Первый пункт</li>
+                  <li>Второй пункт</li>
+                  <li>Третий пункт</li>
+                </ol>
+              </div>
+            </div>
+
+            @@include('templates/_pagination.html')
+          </div>
+
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-md-6 col-xs-12 indent-40-tablet">
+                <div class="new">
+                  <div class="new-description">
+                    <span class="date">
+                      <svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></use></svg>
+                      12/12/2016
+                    </span>
+                    <h5><a href="#" class="link">Эвелина Бледанс награждена Орденом Миротворца</a></h5>
+                    <p>Благотворительный фонд «Даунсайд Ап» принимает участие в спортивном мероприятии «Забег Корпораций», которое состоится 17 сентября. Наш фонд - партнер мероприятия.</p>
+                    <a href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <div class="new">
+                  <div class="new-description">
+                    <span class="date">
+                      <svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></use></svg>
+                      12/12/2016
+                    </span>
+                    <h5><a href="#" class="link">Эвелина Бледанс награждена Орденом Миротворца</a></h5>
+                    <p>Благотворительный фонд «Даунсайд Ап» принимает участие в спортивном мероприятии «Забег Корпораций», которое состоится 17 сентября. Наш фонд - партнер мероприятия.</p>
+                    <a href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+  </div>
+</div>
+
+@@include('templates/_boards.html')
+<div class="widget ind-70">
+  <div class="container">
+    <p class="open-sans fs-28"><span class="fs-16 text-gray-light">03</span> Формы и поля</p>
+    <hr class="indent-40">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <div class="row">
+          <div class="flex flex-wrap align-items-center">
+            <div class="col-md-3 col-xs-12 indent-20 text-gray-light open-sans">
+              Неактивное
+            </div>
+            <div class="col-md-9 col-xs-12 input-block">
+              <input type="text">
+              <span class="input-block-placeholder">Как вас зовут?</span>
+            </div>
+            <div class="col-md-3 col-xs-12 indent-20 text-gray-light open-sans">
+              Активное
+            </div>
+            <div class="col-md-9 col-xs-12 input-block active">
+              <input type="text" value="Дарь" class="focus">
+              <span class="input-block-placeholder">Как вас зовут?</span>
+            </div>
+            <div class="col-md-3 col-xs-12 indent-20 text-gray-light open-sans">
+              Заполненное
+            </div>
+            <div class="col-md-9 col-xs-12 input-block active">
+              <input type="text" value="Дарья">
+              <span class="input-block-placeholder">Как вас зовут?</span>
+            </div>
+            <div class="col-md-3 col-xs-12 indent-20 text-gray-light open-sans">
+              Валидация
+            </div>
+            <div class="col-md-9 col-xs-12 input-block">
+              <input type="text" class="error">
+              <span class="input-block-placeholder">Поле должно быть заполнено</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="row indent-60">
+          <div class="col-md-6 col-xs-12 indent-40-tablet">
+            <div class="checkbox no-margin-t">
+              <input type="checkbox" id="ch1">
+              <label for="ch1">Check-box</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="ch2" checked>
+              <label for="ch2">Check-box checked</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" id="ch3">
+              <label for="ch3" class="errors">Check-box valid</label>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="radio">
+              <input type="radio" name="pay" id="p1">
+              <label for="p1">Radio</label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="pay" id="p2" checked>
+              <label for="p2">Radio checked</label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="pay" id="p1">
+              <label for="p1" class="errors">Radio</label>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="input-block select">
+            <select class="js-select">
+              <option>2004
+              <option>2003
+              <option>2002
+              <option>2001
+              <option>2000
+              <option>1999
+              <option>1998
+              <option>1997
+            </select>
+            <span class="input-block-placeholder">Год</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/external.js"></script>
+<script src="js/internal.js"></script>
+
+@@include('templates/_end.html')

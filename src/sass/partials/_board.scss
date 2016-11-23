@@ -1,0 +1,149 @@
+.board {
+  padding: 45px 25px 40px 35px;
+  position: relative;
+  border-radius: 5px;
+  background: #fff;
+  margin: 0 15px;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include align-content(center);
+  @include box-shadow(0 0 0 1px #e1e1e1);
+
+  &:before {
+    content: '';
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: #e1e1e1;
+  }
+  &.red {
+    &:before {
+      background: $main-color;
+    }
+  }
+  &.yellow {
+    &:before {
+      background: #faad19;
+    }
+  }
+  &.purple {
+    &:before {
+      background: #6c236a;
+    }
+  }
+  &.thumb {
+    &:hover {
+      text-decoration: none;
+
+      .thumb {
+        pointer-events: all;
+
+        img {
+          top: -80px;
+        }
+      }
+      .description {
+        p {
+          @include opacity(0);
+        }
+        .head {
+          color: #fff;
+        }
+      }
+    }
+    .description {
+      pointer-events: none;
+    }
+  }
+  &:active,
+  &:focus {
+    @media screen and (max-width: $screen-xs-max) {
+      .description {
+        .head {
+          color: #fff;
+        }
+      }
+    }
+  }
+  h1,h2,h3,h4,h5 {
+    color: #000;
+  }
+  p {
+    @include transition(all .3s ease);
+  }
+  .thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    cursor: pointer;
+    pointer-events: none;
+    border-radius: 4px;
+    z-index: 9;
+    cursor: pointer;
+
+    img {
+      border-radius: 4px;
+      max-width: none;
+      width: auto;
+      min-height: 100%;
+      min-width: 100%;
+      position: relative;
+      pointer-events: none;
+      @include transition(all .5s ease);
+    }
+  }
+  .description {
+    position: relative;
+    top: 0;
+    z-index: 9;
+    cursor: pointer;
+    @include transition(all .5s ease);
+  }
+  .head {
+    margin-bottom: 25px;
+  }
+  .title {
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 5px;
+  }
+  .number {
+    font-family: $font-family-bold;
+    font-size: 16px;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    flex: auto;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    .head {
+      font-size: 30px;
+    }
+    .title {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+    .number {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+  }
+}

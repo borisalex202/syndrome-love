@@ -1,0 +1,277 @@
+@@include('templates/_head.html')
+
+@@include('templates/_header.html')
+
+            <div class="widget ind-40">
+              <div class="container">
+                <div class="breadcrumbs">
+                  <ul class="no-style no-margin-v">
+                    <li><a href="index.html">Главная</a></li>
+                    <li>Сделать пожертвование</li>
+                  </ul>
+                </div>
+                <div class="breadcrumbs-back">
+                  <a href="news.html">
+                    <svg class="icon icon-back"><use xlink:href="#icon-back"></use></svg>
+                    Назад
+                  </a>
+                </div>
+                <h2 class="indent-50">Готов помочь</h2>
+                <p class="fs-26 text-bold indent-40">Сделать пожертвование</p>
+
+                <div class="row">
+                  <div class="col-md-6 col-xs-12 indent-40-tablet">
+                    <ul class="tab-nav no-style" role="tablist">
+                      <li class="active"><a href="#monthly" data-toggle="tab">Ежемесячное</a></li>
+                      <li><a href="#single" data-toggle="tab">Разовое</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                      <div class="tab-pane active fade in" id="monthly">
+                        <form>
+                          <div class="indent-30-tablet flex-desktop" data-checked=".donation_input">
+                            <div class="radio flex-1">
+                              <input type="radio" name="pay" id="p1" checked>
+                              <label for="p1">200 руб.</label>
+                            </div>
+                            <div class="radio flex-1">
+                              <input type="radio" name="pay" id="p2">
+                              <label for="p2">500 руб.</label>
+                            </div>
+                            <div class="radio flex-1">
+                              <input type="radio" name="pay" id="p3">
+                              <label for="p3">1000 руб.</label>
+                            </div>
+                            <div class="radio flex-1-2">
+                              <input type="radio" class="active" name="pay" id="p4">
+                              <label for="p4">Другая сумма</label>
+                            </div>
+                          </div>
+
+                          <div class="input-block donation_input" style="display: none;">
+                            <input type="text">
+                            <span class="input-block-placeholder">Сумма пожертвования, руб.</span>
+                          </div>
+                          <div class="input-block">
+                            <input type="text">
+                            <span class="input-block-placeholder">Ваше Имя</span>
+                          </div>
+                          <div class="input-block">
+                            <input type="text">
+                            <span class="input-block-placeholder">Ваша фамилия</span>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6 col-xs-12 input-block">
+                              <input type="tel">
+                              <span class="input-block-placeholder">Контактный телефон</span>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 input-block">
+                              <input type="email">
+                              <span class="input-block-placeholder">E-mail</span>
+                            </div>
+                          </div>
+
+                          <div class="checkbox">
+                            <input type="checkbox" id="of">
+                            <label for="of">Я принимаю условие <a href="#" class="preventDefault" data-toggle="modal" data-target="#offer">оферты</a></label>
+                          </div>
+                          <button type="submit" class="btn btn-danger btn-50">Помочь</button>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="single">
+                        <form>
+                          <div class="flex-desktop indent-30-tablet">
+                            <div class="radio flex-1">
+                              <input type="radio" name="group" id="grp1" checked>
+                              <label for="grp1"><svg class="icon icon-card"><use xlink:href="#icon-card"></use></svg>Банковская карта</label>
+                            </div>
+                            <div class="radio get-acc flex-1">
+                              <input type="radio" name="group" id="grp2">
+                              <label for="grp2"><svg class="icon icon-payment"><use xlink:href="#icon-payment"></use></svg>Другие способы оплаты</label>
+                            </div>
+                          </div>
+                          <hr class="no-margin-t indent-30">
+                          <div id="card">
+                            <div class="indent-30-tablet flex-desktop" data-checked=".donation_input">
+                              <div class="radio flex-1">
+                                <input type="radio" name="pays" id="ps1" checked>
+                                <label for="ps1">200 руб.</label>
+                              </div>
+                              <div class="radio flex-1">
+                                <input type="radio" name="pays" id="ps2">
+                                <label for="ps2">500 руб.</label>
+                              </div>
+                              <div class="radio flex-1">
+                                <input type="radio" name="pays" id="ps3">
+                                <label for="ps3">1000 руб.</label>
+                              </div>
+                              <div class="radio flex-1-2">
+                                <input type="radio" class="active" name="pays" id="ps4">
+                                <label for="ps4">Другая сумма</label>
+                              </div>
+                            </div>
+
+                            <div class="input-block donation_input" style="display: none;">
+                              <input type="text">
+                              <span class="input-block-placeholder">Сумма пожертвования, руб.</span>
+                            </div>
+                            <div class="input-block">
+                              <input type="text">
+                              <span class="input-block-placeholder">Ваше Имя</span>
+                            </div>
+                            <div class="input-block">
+                              <input type="text">
+                              <span class="input-block-placeholder">Ваша фамилия</span>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-6 col-xs-12 input-block">
+                                <input type="tel">
+                                <span class="input-block-placeholder">Контактный телефон</span>
+                              </div>
+                              <div class="col-sm-6 col-xs-12 input-block">
+                                <input type="email">
+                                <span class="input-block-placeholder">E-mail</span>
+                              </div>
+                            </div>
+
+                            <div class="checkbox">
+                              <input type="checkbox" id="ofs">
+                              <label for="ofs">Я принимаю условие <a href="#" class="preventDefault" data-toggle="modal" data-target="#offer">оферты</a></label>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-50">Помочь</button>
+                          </div>
+
+                          <div id="payment" style="display: none;">
+                            <div class="accordion">
+                              <span class="accordion-link">Банковская квитанция<svg class="icon icon-arrow-down"><use xlink:href="#icon-arrow-down"></use></svg></span>
+                              <div class="accordion-content">
+                                <p>Отправьте СМС на короткий номер 3443 с буквами "СД" и суммой, которую вы хотели бы пожертвовать на развивающие программы для детей с синдромом Дауна. Например, "СД 300".</p>
+                                <p>С Вашего счета спишется только сумма пожертвования, никаких дополнительных комиссий.</p>
+                                <p>Большое спасибо!</p>
+                              </div>
+                            </div>
+                            <div class="accordion">
+                              <span class="accordion-link">СМС на номер 3443<svg class="icon icon-arrow-down"><use xlink:href="#icon-arrow-down"></use></svg></span>
+                              <div class="accordion-content">
+                                <p>Отправьте СМС на короткий номер 3443 с буквами "СД" и суммой, которую вы хотели бы пожертвовать на развивающие программы для детей с синдромом Дауна. Например, "СД 300".</p>
+                                <p>С Вашего счета спишется только сумма пожертвования, никаких дополнительных комиссий.</p>
+                                <p>Большое спасибо!</p>
+                              </div>
+                            </div>
+                            <div class="accordion">
+                              <span class="accordion-link">Киви и Киви кошелек<svg class="icon icon-arrow-down"><use xlink:href="#icon-arrow-down"></use></svg></span>
+                              <div class="accordion-content">
+                                <p>Отправьте СМС на короткий номер 3443 с буквами "СД" и суммой, которую вы хотели бы пожертвовать на развивающие программы для детей с синдромом Дауна. Например, "СД 300".</p>
+                                <p>С Вашего счета спишется только сумма пожертвования, никаких дополнительных комиссий.</p>
+                                <p>Большое спасибо!</p>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 col-xs-12 content-indent-left-30">
+                    <div class="row">
+                      <div class="links">
+                        <div class="col-sm-6 col-xs-12 link-block">
+                          <div class="content">
+                            <a href="#" class="title">На что пойдут мои деньги?</a>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 link-block">
+                          <div class="content">
+                            <a href="#" class="title">Регулярные пожертвования — почему это важно</a>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 link-block">
+                          <div class="content">
+                            <a href="#" class="title">Нам можно доверять</a>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 link-block">
+                          <div class="content">
+                            <a href="#" class="title">Кому мы смогли помочь</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="widget ind-60 bg-gray border-v">
+              <div class="container">
+                <div class="row flex flex-wrap-tablet">
+                  <div class="board red">
+                      <div class="description">
+                        <h4 class="head">Кому мы помогаем?</h4>
+                        <p>
+                          Краткое пояснение раздела, в который пользователь попадет после клика
+                        </p>
+                      </div>
+                  </div>
+                  <div class="board yellow">
+                      <div class="description">
+                        <h4 class="head">Как мы помогаем?</h4>
+                        <p>
+                          Краткое пояснение раздела, в который пользователь попадет после клика
+                        </p>
+                      </div>
+                  </div>
+                  <div class="board purple">
+                      <div class="description">
+                        <h4 class="head">Результаты</h4>
+                        <p class="indent-20">
+                          Краткое пояснение раздела, в который пользователь попадет после клика
+                        </p>
+                        <div class="col-sm-6 col-xs-12 indent-40-mobile no-padding-h">
+                          <p class="title">За сентябрь собрано</p>
+                          <p class="number">12 000 Р</p>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 no-padding-l">
+                          <p class="title">Успешно помогли</p>
+                          <p class="number">27 000 семей</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+@@include('templates/_footer.html')
+
+@@include('templates/_modals.html')
+
+<script type="text/javascript">
+  $('#offer').on('shown.bs.modal', function (e) {
+    $('.scroll-pane').jScrollPane();
+  })
+  $(window).resize(function(){
+    $('.scroll-pane').jScrollPane();
+  });
+
+  $('[data-checked]').on('click', function(){
+    var el = $(this).data('checked');
+
+    if(!$(this).find('#p4, #ps4').is(':checked')){
+      $(this).closest('form').find(el).slideUp();
+    } else {
+      $(this).closest('form').find(el).slideDown();
+    }
+  });
+  $('#grp1').on('click', function(){
+    $('#card').slideDown();
+    $('#payment').slideUp();
+  });
+  $('#grp2').on('click', function(){
+    $('#card').slideUp();
+    $('#payment').slideDown();
+  });
+</script>
+
+@@include('templates/_end.html')
