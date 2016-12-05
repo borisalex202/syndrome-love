@@ -58,6 +58,22 @@
       font-family: $font-family-bold;
     }
   }
+  .logo {
+    position: relative;
+  }
+  .donate {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &-text {
+      color: #fff;
+      font-size: 12px;
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+    }
+  }
   @media screen and (max-height: 800px) {
     &-container {
       padding: 3% 25px 3%;
@@ -90,6 +106,23 @@
     }
     .logo {
       text-align: right;
+      display: block;
+
+      .logotype {
+        display: block;
+        max-width: 220px;
+        margin: 0 0 20px auto;
+      }
+    }
+    .donate {
+      position: static;
+      display: inline-block;
+      margin-bottom: 10px;
+
+      &-text {
+        position: static;
+        display: block;
+      }
     }
     .description {
       font-size: 24px;

@@ -2,7 +2,10 @@
   text-decoration: none;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
-  display: block;
+  width: 100%;
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include align-items(start);
 
   &:hover {
     text-decoration: none;
@@ -18,24 +21,27 @@
   }
   &-wrap {
     margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    @include flexbox();
+    @include flex-wrap(wrap);
   }
   .thumb {
     border-radius: 3px 3px 0 0;
     background: #953789;
     height: 200px;
+    width: 100%;
     overflow: hidden;
 
     img {
       height: 100%;
       max-width: none;
       width: auto;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
       @include transition(all .5s ease);
     }
     @media screen and (max-width: $screen-sm) {
+      width: 100%;
       height: auto;
 
       img {

@@ -289,6 +289,7 @@ hr {
       margin: -1px 0 0 0;
       border-radius: 0 0 2px 2px;
       z-index: 201;
+      max-width: 100%;
       @include box-shadow(none);
       @include transition(all .3s linear);
 
@@ -301,6 +302,9 @@ hr {
           color: #000;
           background: #fff;
           border-bottom: 1px solid #f4f6f8;
+          white-space: normal;
+          display: block;
+          max-width: 100%;
           @include transition(all .3s linear);
 
           &:before {

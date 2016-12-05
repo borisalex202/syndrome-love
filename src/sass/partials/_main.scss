@@ -19,6 +19,15 @@ textarea,
 a {
   outline: none !important;
 }
+.title {
+  &-head {
+    margin-top: 10px;
+
+    @media screen and (max-width: $screen-sm-max) {
+      margin-top: 0;
+    }
+  }
+}
 .wrapper {
   height: 100%;
 }
@@ -165,7 +174,7 @@ a {
       margin-bottom: 65px;
     }
     @media screen and (max-width: $screen-xs-max) {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
   }
 }

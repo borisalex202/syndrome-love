@@ -1,0 +1,10 @@
+.smi {
+  &-block {
+    padding: 20px;
+    @include transition(all .3s ease);
+
+    &:hover {
+      background: #f8f8f8;
+    }
+  }
+}
