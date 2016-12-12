@@ -4,6 +4,13 @@
   &:last-child {
     margin-bottom: 0;
   }
+  &-thumb {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
   .date,
   .tag {
     display: inline-block;;

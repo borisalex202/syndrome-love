@@ -14,17 +14,45 @@ nav {
       &:before {
         display: none;
       }
-      &:hover > .sub-menu,
-      &.hover > .sub-menu {
+      &:hover,
+      &.hover {
         @media screen and (min-width: $screen-md) {
-          pointer-events: all;
-          @include opacity(1);
+          > .sub-menu {
+              pointer-events: all;
+              @include opacity(1);
+          }
         }
       }
       &.has-childs {
         @media screen and (min-width: $screen-md) {
+          &:hover,
+          &.hover {
+            .arrow {
+              pointer-events: all;
+              @include opacity(1);
+            }
+          }
+          &:last-child {
+            @media screen and (max-width: 1300px) {
+              .sub-menu {
+                left: -390px;
+              }
+            }
+          }
           .icon-back {
             display: none;
+          }
+          .arrow {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 30px;
+            border-bottom: 15px solid $main-color;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            pointer-events: none;
+            @include transition(all .3s linear);
+            @include opacity(0);
           }
         }
         @media screen and (max-width: $screen-sm-max) {
@@ -49,6 +77,9 @@ nav {
               left: -35px;
               @include opacity(1);
             }
+          }
+          .sub-menu {
+            display: none;
           }
           .icon-back {
             position: absolute;
@@ -101,15 +132,6 @@ nav {
         border-radius: 3px 3px 0 0;
         background: $main-color;
       }
-      &:after {
-        content: '';
-        position: absolute;
-        top: -15px;
-        left: 30px;
-        border-bottom: 15px solid $main-color;
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-      }
       li {
         float: left;
         width: 50%;
@@ -153,6 +175,12 @@ nav {
     &.main-menu.show-childs {
       display: block;
 
+
+      > ul {
+        > li {
+          margin: 0;
+        }
+      }
       ~ .info {
         @media screen and (max-height: 600px) {
           position: static;
@@ -166,6 +194,13 @@ nav {
 
           &.has-childs {
             max-height: 10000px;
+            position: relative;
+            z-index: 999;
+            display: none;
+
+            &.active {
+              display: block;
+            }
           }
         }
       }
