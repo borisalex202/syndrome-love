@@ -226,14 +226,19 @@ nav {
       }
     }
     .offer {
-      float: left;
+      float: right;
       padding: 15px 0;
       margin-left: 60px;
 
       @media screen and (max-width: $screen-lg) {
         margin-left: 15px;
       }
+      @media screen and (min-width: $screen-lg) and (max-width: 1300px) {
+        margin-right: 10px;
+        margin-left: 0px;
+      }
       @media screen and (max-width: $screen-sm-max) {
+        float: left;
         margin-left: 60px;
         padding: 25px 0 0;
       }

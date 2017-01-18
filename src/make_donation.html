@@ -29,7 +29,7 @@
                     <div class="tab-content">
                       <div class="tab-pane active fade in" id="monthly">
                         <form>
-                          <div class="indent-30-tablet flex-desktop" data-checked=".donation_input">
+                          <div class="indent-30-tablet flex-desktop donation-parent">
                             <div class="radio flex-1">
                               <input type="radio" name="pay" value="200" id="p1" checked>
                               <label for="p1">200 руб.</label>
@@ -49,7 +49,7 @@
                           </div>
 
                           <div class="input-block donation_input" style="display: none;">
-                            <input type="text" name="product_price">
+                            <input type="text" name="product_price" id="product_price1">
                             <span class="input-block-placeholder">Сумма пожертвования, руб.</span>
                           </div>
                           <div class="input-block">
@@ -92,7 +92,7 @@
                           </div>
                           <hr class="no-margin-t indent-30">
                           <div id="card">
-                            <div class="indent-30-tablet flex-desktop" data-checked=".donation_input">
+                            <div class="indent-30-tablet flex-desktop donation-parent2">
                               <div class="radio flex-1">
                                 <input type="radio" name="pays" id="ps1" value="200" checked>
                                 <label for="ps1">200 руб.</label>
@@ -111,8 +111,8 @@
                               </div>
                             </div>
 
-                            <div class="input-block donation_input" style="display: none;">
-                              <input type="text" name="product_price">
+                            <div class="input-block donation_input2" style="display: none;">
+                              <input type="text" name="product_price" id="product_price2">
                               <span class="input-block-placeholder">Сумма пожертвования, руб.</span>
                             </div>
                             <div class="input-block">
@@ -255,23 +255,37 @@
     $('.scroll-pane').jScrollPane();
   });
 
-  $('[data-checked]').on('click', function(){
-        var el = $(this).attr('data-checked'),
-            sm = $(this).find('input[name="pay"]:checked, input[name="pays"]:checked').attr('value'),
-            elm = $('[name="product_price"]');
 
-        if(!$(this).find('#p4, #ps4').is(':checked')){
-            setTimeout(function(){
-              elm.val(sm).closest('.input-block').addClass('active');
-              console.log(sm);
-            }, 200);
+  $('.donation-parent input').on('click', function(){
+    var el = $('.donation_input'),
+        sm = $(this).attr('value'),
+        elm = $('#product_price1');
 
-            $(el).slideUp();
-        } else {
-            elm.val('');
-            $(el).slideDown();
-        }
-    });
+    if(!$(this).is('#p4:checked')){
+        setTimeout(function(){
+          elm.val(sm);
+        }, 300);
+        $(el).slideUp();
+    } else {
+        elm.val('');
+        $(el).slideDown();
+    }
+  });
+  $('.donation-parent2 input').on('click', function(){
+    var el = $('.donation_input2'),
+        sm = $(this).attr('value'),
+        elm = $('#product_price2');
+
+    if(!$(this).is('#ps4:checked')){
+        setTimeout(function(){
+          elm.val(sm);
+        }, 300);
+        $(el).slideUp();
+    } else {
+        elm.val('');
+        $(el).slideDown();
+    }
+  });
   $('#grp1').on('click', function(){
     $('#card').slideDown();
     $('#payment').slideUp();
