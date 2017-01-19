@@ -94,6 +94,9 @@
     }
   }
   @media screen and (max-width: $screen-xs-max) {
+    img {
+      width: 100%;
+    }
     .info {
       padding: 55px 40px;
     }
