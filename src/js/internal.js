@@ -29,6 +29,11 @@ var nextArrowButton = "<svg class='icon icon-arrow-next slick-next'><use xlink:h
 	});
 
   $('input, textarea')
+    .each(function(){
+      if ($(this).val().length > 0) {
+        $(this).addClass('active').closest('.input-block').addClass('active');
+      }
+    })
     .blur(function() {
         if (!$(this).val()) {
             $(this).closest('.input-block').removeClass('active');

@@ -384,3 +384,31 @@ a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
+.svb-dsa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 50%;
+  padding-left: 30px;
+  max-height: 180px;
+  overflow: hidden;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+  p {
+    color: #939ca1;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @media (max-width: $screen-sm-max) {
+    position: static;
+    padding-left: 0;
+    max-width: 100%;
+    margin-bottom: 40px;
+    max-height: none;
+    overflow: inherit;
+  }
+}

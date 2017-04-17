@@ -58,7 +58,6 @@ function boardCounting() {
       }, 100);
     })
 }
-boardCounting();
-$(window).resize(function(){
+$(window).on('load resize', function(){
   boardCounting();
 })
