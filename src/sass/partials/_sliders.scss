@@ -16,7 +16,7 @@
           height: 100%;
         }
         .info {
-          max-width: 50%;
+          max-width: 100%;
           padding: 55px 0;
           color: #fff;
 
@@ -75,6 +75,10 @@
               font-size: 25px;
               line-height: 40px;
               margin: 15px 0 20px;
+
+              br {
+                display: none;
+              }
             }
             p {
               display: none;

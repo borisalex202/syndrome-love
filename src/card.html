@@ -1,0 +1,208 @@
+@@include('templates/_head.html')
+
+@@include('templates/_header.html')
+
+            <div class="slider-main">
+                <div class="">
+                    <div class="container">
+                        <div class="breadcrumbs">
+                            <ul class="no-style no-margin-v">
+                                <li><a href="index.html">Главная</a></li>
+                                <li><a href="events.html">Новости</a></li>
+                                <li>Акция «Подари открытку»</li>
+                            </ul>
+                        </div>
+                        <div class="breadcrumbs-back">
+                            <a href="events.html">
+                                <svg class="icon icon-back"><use xlink:href="#icon-back"></use></svg>
+                                Назад
+                            </a>
+                        </div>
+                        <div class="info">
+                            <h1>Акция «Подари открытку»</h1>
+                            <p>
+                                Акция «Подари открытку» призвана стереть границы между <br class="hidden-xs">
+                                людьми и подарить улыбку каждому участнику. Собранные <br class="hidden-xs">
+                                средста пойдут на благотворительность
+                            </p>
+                            @@include('templates/_share.html')
+                        </div>
+                    </div>
+                    <img src="img/card1.jpg" alt="Благотворительный велопроезд 2016" />
+                </div>
+            </div>
+
+            <div class="widget ind-70">
+                <div class="container">
+                    <div class="content-indent-right page">
+                        <h3 class="fs-26 indent-20 no-margin-t">Про акцию</h3>
+                        <p>Дорогие друзья, приглашаем вас в яркий, оранжевый, солнечный апельсиновый сад!</p>
+                        <p>Благотворительная онлайн-акция #мыдарилиапельсин приурочена к 21 марта, Всемирному дню человека с синдромом Дауна. Символ акции – апельсин, выбран не случайно, ведь он напоминает солнце, а людей с синдромом Дауна часто называют «солнечными».</p>
+                        <p>Все средства, собранные в ходе акции будут направлены на программы поддержки детей и подростков с синдромом Дауна.</p>
+
+                        <h3 class="fs-26 indent-20">Как принять участие в акции</h3>
+                        <p>1.Выберите зелёный апельсин на дереве в роще. Каждый апельсин - это подарок для ребёнка с синдромом Дауна: занятие с логопедом и дефектологом, консультация родителей ребёнка на онлайн форуме или комплект методической литературы. Всё это поможет особому ребёнку научиться читать, общаться, дружить со сверстниками и познавать мир.</p>
+
+                        <p>2.После того, как Вы выбрали апельсин, кликните на него и сделайте пожертвование. Апельсин созреет и станет оранжевым! Напишите пожелание ребятам и их родителям, разместите свою фотографию.</p>
+                        <p>В прошлом году в ходе акции мы собрали 425 560 рублей. Зовите друзей в апельсиновую рощу через социальные сети и помогайте вместе детям с синдромом Дауна! </p>
+                    </div>
+                </div>
+            </div>
+            <div class="widget widget-card ind-85 bg-gray">
+                <div class="container">
+                    <div class="card-filter">
+                        <h3 class="fs-26 no-margin-t">Выбрать и отправить открытку</h3>
+                        <div class="card-type">
+                            <span>Тематика: </span>
+                            <div class="input-block select">
+                                <select class="js-select no-bg">
+                                    <option>Все
+                                    <option>Природа
+                                    <option>Люди
+                                    <option>Абстракция
+                                    <option>Города
+                                </select>
+                            </div>
+                        </div>
+                        <a href="#" data-toggle="modal" data-target="#cards" class="card-wait-count"><img src="img/svg/mail_ico.svg" alt="" class="icon"><span><span class="count">3</span> открытки</span> ждут отправки</a>
+                    </div>
+                    <div class="card-container">
+                        <div class="card-item">
+                            <div class="card-thumb" style="background-image: url('img/card-th1.jpg')"></div>
+                            <div class="card-content">
+                                <p class="card-title">Новогодняя открытка в синих тонах № 1</p>
+                                <div class="card-tools">
+                                    <div class="card-count counter-block">
+                                        <input type="text" value="1">
+                                    </div>
+                                    <button class="btn btn-danger add-card">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-thumb" style="background-image: url('img/card-th2.jpg')"></div>
+                            <div class="card-content">
+                                <p class="card-title">Новогодняя открытка № 2</p>
+                                <div class="card-tools">
+                                    <div class="card-count counter-block">
+                                        <input type="text" value="3">
+                                    </div>
+                                    <button class="btn btn-danger add-card">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-thumb" style="background-image: url('img/card-th3.jpg')"></div>
+                            <div class="card-content">
+                                <p class="card-title">Новогодняя открытка № 2</p>
+                                <div class="card-tools">
+                                    <div class="card-count counter-block">
+                                        <input type="text" value="3">
+                                    </div>
+                                    <button class="btn btn-danger add-card">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-thumb" style="background-image: url('img/card-th1.jpg')"></div>
+                            <div class="card-content">
+                                <p class="card-title">Новогодняя открытка в синих тонах № 1</p>
+                                <div class="card-tools">
+                                    <div class="card-count counter-block">
+                                        <input type="text" value="1">
+                                    </div>
+                                    <button class="btn btn-danger add-card">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-thumb" style="background-image: url('img/card-th2.jpg')"></div>
+                            <div class="card-content">
+                                <p class="card-title">Новогодняя открытка № 2</p>
+                                <div class="card-tools">
+                                    <div class="card-count counter-block">
+                                        <input type="text" value="3">
+                                    </div>
+                                    <button class="btn btn-danger add-card">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-thumb" style="background-image: url('img/card-th3.jpg')"></div>
+                            <div class="card-content">
+                                <p class="card-title">Новогодняя открытка № 2</p>
+                                <div class="card-tools">
+                                    <div class="card-count counter-block">
+                                        <input type="text" value="3">
+                                    </div>
+                                    <button class="btn btn-danger add-card">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-thumb" style="background-image: url('img/card-th1.jpg')"></div>
+                            <div class="card-content">
+                                <p class="card-title">Новогодняя открытка в синих тонах № 1</p>
+                                <div class="card-tools">
+                                    <div class="card-count counter-block">
+                                        <input type="text" value="1">
+                                    </div>
+                                    <button class="btn btn-danger add-card">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-thumb" style="background-image: url('img/card-th2.jpg')"></div>
+                            <div class="card-content">
+                                <p class="card-title">Новогодняя открытка № 2</p>
+                                <div class="card-tools">
+                                    <div class="card-count counter-block">
+                                        <input type="text" value="3">
+                                    </div>
+                                    <button class="btn btn-danger add-card">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @@include('templates/_pagination.html')
+                </div>
+            </div>
+
+@@include('templates/_footer.html')
+@@include('templates/_modals.html')
+<script>
+    $('.slider-main').slick({
+        speed: 600,
+        prevArrow: prevArrowButton,
+        nextArrow: nextArrowButton
+    });
+    $('.counter-block').append('<div class="inc counter-btn">+</div><div class="dec counter-btn">-</div>');
+
+    $('.counter-btn').on('click', function() {
+
+        var $button = $(this);
+        var oldValue = $button.parent().find("input").val();
+
+        if ($button.hasClass('inc')) {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            if (oldValue > 0) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 0;
+            }
+        }
+
+        $button.parent().find('input').val(newVal);
+
+    });
+
+    $('.add-card').on('click', function () {
+       $(this)
+            .addClass('active')
+            .text(function(i, text){
+                return text === "Отправить" ? "Добавлена" : "Отправить";
+            })
+    });
+</script>
+@@include('templates/_end.html')

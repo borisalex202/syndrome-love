@@ -11,6 +11,17 @@
       margin: 50px auto;
     }
   }
+  &.big {
+    .modal-dialog {
+      max-width: 1140px;
+      width: 100%;
+      margin: 50px auto;
+
+      @media (max-width: $screen-sm-max) {
+        margin: 0 auto;
+      }
+    }
+  }
   &.full-vh {
     .modal-dialog {
       max-height: calc(100vh - 97px);
@@ -65,6 +76,7 @@
   }
   &-cross {
     color: #a0aeb8;
+    z-index: 999;
   }
   &-content {
     border: 1px solid #e8eaec;

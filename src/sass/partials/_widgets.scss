@@ -10,8 +10,29 @@
   }
   &.ind-70 {
     padding: 70px 0;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 45px 0;
+    }
   }
   &.ind-80 {
     padding: 80px 0;
+  }
+  &.ind-85 {
+    padding: 85px 0;
+  }
+  &-card {
+    &.ind-85 {
+      padding-bottom: 45px;
+    }
+    margin-bottom: 3px;
+    border-bottom: 1px solid #E5EAED;
+
+    @media (max-width: $screen-xs-max) {
+      &.ind-85 {
+        padding-top: 45px;
+        padding-bottom: 25px;
+      }
+    }
   }
 }

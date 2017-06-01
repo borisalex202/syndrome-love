@@ -369,7 +369,12 @@ a {
   line-height: 26px;
 
   p {
-    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hot(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 }
 .thumbnail {
