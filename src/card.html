@@ -170,6 +170,7 @@
 
 @@include('templates/_footer.html')
 @@include('templates/_modals.html')
+@@include('templates/_scripts.html')
 <script>
     $('.slider-main').slick({
         speed: 600,
@@ -198,7 +199,7 @@
     });
 
     $('.add-card').on('click', function () {
-       $(this)
+        $(this)
             .addClass('active')
             .text(function(i, text){
                 return text === "Отправить" ? "Добавлена" : "Отправить";
