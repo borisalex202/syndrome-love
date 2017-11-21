@@ -22,6 +22,7 @@
     "normalize.css": "*",
     "bootstrap-sass": "3.*",
     "jquery-form-styler": "1.7.6",
-    "jscrollpane": "2.0.*"
+    "jscrollpane": "2.0.*",
+    "jssocials": "^1.4.0"
   }
 }

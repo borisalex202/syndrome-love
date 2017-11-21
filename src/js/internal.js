@@ -120,6 +120,26 @@ var nextArrowButton = "<svg class='icon icon-arrow-next slick-next'><use xlink:h
     arrowPosition();
   });
 
+    /* JsSocials */
+    jsSocials.shares.odnoklassniki = {
+        label: "OK",
+        logo: "fa fa-odnoklassniki",
+        shareUrl: "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl={url}&st.comments={text}",
+        countUrl: ""
+    };
+
+
+    $("#shares").jsSocials({
+        showLabel: false,
+        showCount: true, 
+        shareIn: "popup",
+        shares: [
+            "facebook",
+            "vkontakte",
+            "odnoklassniki"
+        ]
+    });
+
   function arrowPosition() {
     $('.has-childs').each(function(){
       var itemWidth = $(this).width()/2 - 15;

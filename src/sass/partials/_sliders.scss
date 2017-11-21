@@ -3,6 +3,7 @@
     .slick {
       &-slide {
         z-index: 9;
+        height: auto;
         position: relative;
         outline: none !important;
 
@@ -49,7 +50,6 @@
           img {
             max-width: none;
             width: auto;
-            height: 100%;
           }
         }
         @media screen and (max-width: $screen-sm-max) {

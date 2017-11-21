@@ -3,3 +3,4 @@
 @@include('./../../bower_components/jquery-form-styler/jquery.formstyler.min.js');
 @@include('./../../bower_components/jscrollpane/script/jquery.mousewheel.js');
 @@include('./../../bower_components/jscrollpane/script/jquery.jscrollpane.min.js');
+@@include('./../../bower_components/jssocials/dist/jssocials.min.js');

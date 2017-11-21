@@ -495,3 +495,91 @@ nav {
     }
   }
 }
+.share {
+  .jssocials-share {
+    min-width: 95px;
+    margin: 0 10px 10px 0;
+
+    &-link {
+      width: 33px;
+      height: 33px;
+      display: inline-block;
+      padding: 0;
+      background-size: cover !important;
+      vertical-align: top;
+    }
+    &-count {
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      line-height: 33px;
+      padding: 0 5px;
+      display: block;
+      width: 100%;
+
+      &-box {
+        position: relative;
+        height: 33px;
+        min-width: 60px;
+        margin: 0;
+        display: inline-block;
+        vertical-align: top;
+
+        &.jssocials-share-no-count {
+          .jssocials-share-count {
+            &:before {
+              content: '0';
+              width: 100%;
+              text-align: center;
+              color: #fff;
+              font-size: 14px;
+              line-height: 33px;
+            }
+          }
+        }
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &-facebook {
+      .jssocials-share {
+        &-link {
+          background: url("../img/svg/share-fb.svg") no-repeat;
+        }
+        &-count {
+          &-box {
+            background: #5778C6;
+          }
+        }
+      }
+    }
+    &-vkontakte {
+      .jssocials-share {
+        &-link {
+          background: url("../img/svg/share-vk.svg") no-repeat;
+        }
+        &-count {
+          &-box {
+            background: #618AB0;
+          }
+        }
+      }
+    }
+    &-odnoklassniki {
+      .jssocials-share {
+        &-link {
+          background: url("../img/svg/share-ok.svg") no-repeat;
+        }
+        &-count {
+          &-box {
+            background: #F28645;
+          }
+        }
+      }
+    }
+    .fa {
+      display: none;
+    }
+  }
+}
