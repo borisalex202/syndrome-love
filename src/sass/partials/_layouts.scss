@@ -583,3 +583,226 @@ nav {
     }
   }
 }
+.numicon {
+  &-item {
+    border: 1px solid #DDE2E5;
+    position: relative;
+    border-radius: 2px;
+    margin-top: 20px;
+
+    &__main {
+      padding: 40px 30px;
+      position: relative;
+      @include flexbox();
+      @include flex-wrap(wrap);
+    }
+    &__thumb {
+      width: 145px;
+
+      img {
+        border: 1px solid #F5F7F9;
+      }
+    }
+    &__content {
+      padding-left: 35px;
+      width: calc(100% - 145px);
+      max-width: 590px;
+    }
+    &__title {
+      font-family: $font-family-bold;
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+    &__desc {
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      line-height: 1.5;
+
+      &_toggle {
+        display: none;
+      }
+    }
+    &__toggle {
+      font-size: 14px;
+    }
+    &__remove {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: url('../img/numicon-delete.png') no-repeat;
+      cursor: pointer;
+      @include transition(all .3s ease);
+      @include translate(0, -50%);
+
+      &:hover {
+        @include opacity(.7);
+      }
+    }
+    &__info {
+      width: calc(100% - 145px - 590px - 40px);
+      text-align: center;
+      padding-top: 20px;
+    }
+    &__footer {
+      border-top: 1px solid #DDE2E5;
+      background-color: #F5F5F5;
+      padding: 17px 30px;
+      font-size: 16px;
+      font-family: $font-family-bold;
+      color: rgba(0, 0, 0, 0.529);
+      line-height: 1.375;
+      text-align: right;
+    }
+    .price {
+      font-family: $font-family-bold;
+      font-size: 20px;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .counter {
+      &-block {
+        input {
+          border-radius: 2px;
+          background-color: #fff;
+          border: 1px solid #DEE3E6;
+          width: 152px;
+          height: 48px;
+          text-align: center;
+          padding-left: 46px;
+          padding-right: 46px;
+          font-family: $font-family-bold;
+        }
+      }
+      &-btn {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid #DEE3E6;
+        background-color: #F3F3F3;
+        top: 50%;
+        font-family: $font-family-bold;
+        @include translate(0, -50%);
+
+        &.inc {
+          right: 15px;
+        }
+        &.dec {
+          right: inherit;
+          bottom: inherit;
+          left: 15px;
+        }
+      }
+    }
+    @media (max-width: $screen-md-max) {
+      &__thumb {
+        @include order(1);
+      }
+      &__info {
+        width: 100%;
+        max-width: 145px;
+        @include order(2);
+      }
+      &__content {
+        width: calc(100% - 145px);
+        @include order(3);
+      }
+      .counter {
+        &-block {
+          input {
+            width: 145px;
+          }
+        }
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      &__remove {
+        top: 10px;
+        right: 10px;
+        @include translate(0, 0);
+      }
+    }
+    @media (max-width: 550px) {
+
+      &__thumb {
+        width: 100%;
+        @include flexbox();
+        @include flex-wrap(wrap);
+      }
+      &__info {
+        width: auto;
+        margin-left: auto;
+      }
+      &__main {
+        padding: 25px 15px;
+      }
+      &__footer {
+        padding: 15px;
+      }
+      &__content {
+        margin-top: 20px;
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+    @media (max-width: 450px) {
+      &__thumb {
+        display: block;
+
+        img {
+          width: 100%;
+          height: auto;
+          max-height: none;
+        }
+      }
+      &__info {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+  &-add {
+    position: relative;
+    height: 53px;
+    line-height: 53px;
+    padding: 0 40px 0 60px;
+    color: rgb(238, 59, 57);
+    background-color: #fff;
+    border: 1px solid rgb(238, 59, 57);
+    border-radius: 5px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    @include transition(all .3s ease);
+
+    &:before {
+      content: '+';
+      position: absolute;
+      top: 14px;
+      left: 20px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid rgb(238, 59, 57);
+      border-radius: 50%;
+      line-height: 20px;
+      text-align: center;
+      padding-left: .5px;
+      @include transition(all .3s ease);
+    }
+
+    &:hover {
+      background-color: rgb(238, 59, 57);
+      color: #fff;
+
+      &:before {
+        background-color: #fff;
+        border-color: #fff;
+        color: rgb(238, 59, 57);
+      }
+    }
+  }
+  .js-select .jq-selectbox__select-text {
+    padding: 19.5px 25px;
+  }
+}

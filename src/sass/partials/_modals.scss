@@ -74,6 +74,41 @@
   &.in {
 
   }
+  &.numicon {
+    .modal-content {
+      padding: 70px 50px 50px 50px;
+
+      @media (max-width: $screen-xs-max) {
+        padding: 60px 25px;
+      }
+    }
+    .numicon {
+      &-item {
+        &__content {
+          width: calc(100% - 145px);
+          max-width: 100%;
+
+          @media (max-width: 550px) {
+            width: 100%;
+          }
+        }
+        &__info {
+          width: 100%;
+
+          .counter {
+            &-block {
+              input {
+                max-width: 145px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .jq-selectbox__dropdown {
+      top: 100% !important;
+    }
+  }
   &-cross {
     color: #a0aeb8;
     z-index: 999;

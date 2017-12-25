@@ -425,6 +425,9 @@ hr {
       font-size: 16px;
       line-height: 22px;
 
+      &.fs-14 {
+        font-size: 14px;
+      }
       &:before {
         content: '';
         position: absolute;
@@ -534,6 +537,12 @@ hr {
     position: relative;
     display: inline-block;
 
+    &.unstock {
+      .counter-order {
+        pointer-events: all;
+        @include opacity(1);
+      }
+    }
     input {
       width: 63px;
       height: 39px;
@@ -572,5 +581,23 @@ hr {
         background: #BFBFBF;
       }
     }
+  }
+  &-order {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: 2px;
+    background-color: #EB3D3F;
+    font-family: $font-family-bold;
+    font-size: 14px;
+    line-height: 48px;
+    color: #fff;
+    cursor: pointer;
+    pointer-events: none;
+    z-index: 3;
+    @include transition(all .3s ease);
+    @include opacity(0);
   }
 }

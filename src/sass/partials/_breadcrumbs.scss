@@ -1,4 +1,15 @@
 .breadcrumbs {
+  &.white {
+    ul {
+      li {
+        color: #fff;
+
+        &:after {
+          color: #fff;
+        }
+      }
+    }
+  }
   &-back {
     margin-bottom: 30px;
 
